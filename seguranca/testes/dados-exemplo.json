@@ -1,0 +1,61 @@
+{
+  "observacao": "Dados totalmente sinteticos. IDs em formato UUID; substitua por IDs de teste do ambiente autorizado.",
+  "usuarios": [
+    {
+      "id": "64a1b2c3-d4e5-4789-a012-345678901301",
+      "nome": "Produtor Sintetico A",
+      "email": "produtor-a@example.invalid",
+      "perfil": "PRODUTOR_EXPORTADOR"
+    },
+    {
+      "id": "64a1b2c3-d4e5-4789-a012-345678901302",
+      "nome": "Produtor Sintetico B",
+      "email": "produtor-b@example.invalid",
+      "perfil": "PRODUTOR_EXPORTADOR"
+    },
+    {
+      "id": "64a1b2c3-d4e5-4789-a012-345678901303",
+      "nome": "Administrador Sintetico",
+      "email": "admin@example.invalid",
+      "perfil": "ADMIN"
+    }
+  ],
+  "propriedades": [
+    {
+      "id": "64a1b2c3-d4e5-4789-a012-345678901311",
+      "usuarioId": "64a1b2c3-d4e5-4789-a012-345678901301",
+      "nome": "Propriedade Sintetica A"
+    },
+    {
+      "id": "64a1b2c3-d4e5-4789-a012-345678901312",
+      "usuarioId": "64a1b2c3-d4e5-4789-a012-345678901302",
+      "nome": "Propriedade Sintetica B"
+    }
+  ],
+  "talhoes": [
+    {
+      "id": "64a1b2c3-d4e5-4789-a012-345678901321",
+      "propriedadeId": "64a1b2c3-d4e5-4789-a012-345678901311",
+      "nome": "Talhao Sintetico A"
+    },
+    {
+      "id": "64a1b2c3-d4e5-4789-a012-345678901322",
+      "propriedadeId": "64a1b2c3-d4e5-4789-a012-345678901312",
+      "nome": "Talhao Sintetico B"
+    }
+  ],
+  "sensores": [
+    {
+      "id": "64a1b2c3-d4e5-4789-a012-345678901331",
+      "talhaoId": "64a1b2c3-d4e5-4789-a012-345678901321",
+      "identificador": "SENSOR-SINTETICO-A",
+      "status": "ATIVO"
+    },
+    {
+      "id": "64a1b2c3-d4e5-4789-a012-345678901332",
+      "talhaoId": "64a1b2c3-d4e5-4789-a012-345678901322",
+      "identificador": "SENSOR-SINTETICO-B",
+      "status": "ATIVO"
+    }
+  ]
+}

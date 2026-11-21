@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: test
+      DATABASE_URL: postgresql://ci-only:ci-only@127.0.0.1:5432/valesense_ci?schema=public
+      JWT_SECRET: CI-ONLY-FAKE-NOT-A-REAL-SECRET
+      OTP_ENCRYPTION_KEY: CI-ONLY-FAKE-KEY-OVERRIDDEN-BY-TESTS
+      OTP_STORE: memory
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      - run: npm test
